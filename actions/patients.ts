@@ -1,9 +1,18 @@
-import React from 'react'
+"use server";
 
-const patients = () => {
-  return (
-    <div>patients</div>
-  )
+export async function getPatients() {
+  // TODO: Connect to database
+  return [];
 }
 
-export default patients
+export async function createPatient(data: {
+  name: string;
+  email?: string;
+  phone: string;
+  dob?: string;
+  gender?: string;
+  notes?: string;
+}) {
+  // TODO: Connect to database
+  return { success: true, id: `PAT-${Date.now()}` };
+}

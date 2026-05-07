@@ -1,9 +1,4 @@
-import React from 'react'
-
-const typed-client = () => {
-  return (
-    <div>typed-client</div>
-  )
+// Typed Supabase client - placeholder
+export function createTypedClient() {
+  return null;
 }
-
-export default typed-client

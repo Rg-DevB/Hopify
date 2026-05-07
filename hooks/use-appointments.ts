@@ -1,9 +1,8 @@
-import React from 'react'
-
-const use-appointments = () => {
-  return (
-    <div>use-appointments</div>
-  )
+// Appointments hook - placeholder
+export function useAppointments() {
+  return {
+    appointments: [],
+    isLoading: false,
+    error: null,
+  };
 }
-
-export default use-appointments

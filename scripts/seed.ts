@@ -1,9 +1,3 @@
-import React from 'react'
-
-const seed = () => {
-  return (
-    <div>seed</div>
-  )
-}
-
-export default seed
+// Seed script placeholder
+// TODO: Implement database seeding
+console.log("Seed script not configured yet. Set up Supabase first.");

@@ -1,9 +1,8 @@
-import React from 'react'
-
-const use-clinic = () => {
-  return (
-    <div>use-clinic</div>
-  )
+// Clinic hook - placeholder
+export function useClinic() {
+  return {
+    clinic: null,
+    isLoading: false,
+    error: null,
+  };
 }
-
-export default use-clinic

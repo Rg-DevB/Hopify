@@ -1,9 +1,8 @@
-import React from 'react'
-
-const page-header = () => {
+export default function PageHeader({ title, description }: { title: string; description?: string }) {
   return (
-    <div>page-header</div>
-  )
+    <div>
+      <h1 className="text-2xl font-bold text-slate-900 dark:text-white">{title}</h1>
+      {description && <p className="text-slate-500 dark:text-slate-400 mt-1">{description}</p>}
+    </div>
+  );
 }
-
-export default page-header

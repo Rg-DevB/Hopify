@@ -1,9 +1,17 @@
-import React from 'react'
+"use server";
 
-const services = () => {
-  return (
-    <div>services</div>
-  )
+export async function getServices() {
+  // TODO: Connect to database
+  return [];
 }
 
-export default services
+export async function createService(data: {
+  name: string;
+  category: string;
+  duration: string;
+  price: string;
+  description?: string;
+}) {
+  // TODO: Connect to database
+  return { success: true, id: `SRV-${Date.now()}` };
+}

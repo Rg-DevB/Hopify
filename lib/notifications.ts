@@ -1,9 +1,10 @@
-import React from 'react'
-
-const notifications = () => {
-  return (
-    <div>notifications</div>
-  )
+// Notification utilities - placeholder
+export async function sendEmailNotification(to: string, subject: string, body: string) {
+  console.log(`[Notification] Email to ${to}: ${subject}`);
+  return { success: true };
 }
 
-export default notifications
+export async function sendAppointmentReminder(appointmentId: string) {
+  console.log(`[Reminder] Sending reminder for appointment ${appointmentId}`);
+  return { success: true };
+}

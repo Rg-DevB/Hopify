@@ -1,7 +1,14 @@
-import React from 'react'
+"use client";
 
-const providers = () => {
-  return <div>providers</div>
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+import type { ThemeProviderProps } from "next-themes";
+import { Toaster } from "sonner";
+
+export function Providers({ children, ...props }: ThemeProviderProps) {
+  return (
+    <NextThemesProvider {...props}>
+      {children}
+      <Toaster position="top-right" richColors closeButton />
+    </NextThemesProvider>
+  );
 }
-
-export default providers

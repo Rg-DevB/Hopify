@@ -1,9 +1,3 @@
-import React from 'react'
-
-const supabase = () => {
-  return (
-    <div>supabase</div>
-  )
-}
-
-export default supabase
+// Supabase types placeholder
+// Run `npm run db:generate` after setting up Supabase to generate real types
+export type Database = Record<string, never>;

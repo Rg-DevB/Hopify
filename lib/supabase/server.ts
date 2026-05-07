@@ -1,9 +1,5 @@
-import React from 'react'
-
-const server = () => {
-  return (
-    <div>server</div>
-  )
+// Supabase server client - placeholder until Supabase is configured
+export function createServerClient() {
+  console.warn("Supabase server client is not configured.");
+  return null;
 }
-
-export default server
