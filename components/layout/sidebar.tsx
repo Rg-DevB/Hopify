@@ -5,15 +5,22 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { 
   LayoutDashboard, Calendar, Users, Briefcase, Sparkles, Settings, 
-  CreditCard, User, LogOut, Activity, HeartPulse, PanelLeftClose, PanelLeft, Menu
+  CreditCard, User, LogOut, Activity, HeartPulse, PanelLeftClose, PanelLeft, Menu,
+  Stethoscope, Bed, Pill
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { logout } from "@/app/actions/auth";
 
 const mainNavItems = [
   { title: "Dashboard", href: "/app/dashboard", icon: LayoutDashboard },
+  { title: "Analytics", href: "/app/analytics", icon: TrendingUp },
   { title: "Calendar", href: "/app/calendar", icon: Calendar },
   { title: "Appointments", href: "/app/appointments", icon: Activity },
   { title: "Patients", href: "/app/patients", icon: Users },
+  { title: "Doctors", href: "/app/doctors", icon: Stethoscope },
+  { title: "Rooms", href: "/app/rooms", icon: Bed },
+  { title: "AI Prescription", href: "/app/ai-prescription", icon: Sparkles },
+  { title: "Pharmacy", href: "/app/pharmacy", icon: Pill },
   { title: "Services", href: "/app/services", icon: Briefcase },
 ];
 
@@ -97,10 +104,13 @@ export default function Sidebar() {
       </div>
 
       <div className="p-3 mt-auto border-t border-slate-200 dark:border-slate-800 flex flex-col gap-1">
-        <button className={cn(
-          "flex items-center gap-3 px-3 py-2.5 w-full rounded-xl text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-slate-900 dark:hover:text-slate-200 transition-colors",
-          collapsed && "justify-center px-2"
-        )}>
+        <button 
+          onClick={() => logout()}
+          className={cn(
+            "flex items-center gap-3 px-3 py-2.5 w-full rounded-xl text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-slate-900 dark:hover:text-slate-200 transition-colors",
+            collapsed && "justify-center px-2"
+          )}
+        >
           <LogOut className="w-5 h-5 text-slate-400 shrink-0" />
           {!collapsed && "Sign Out"}
         </button>
