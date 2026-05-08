@@ -8,8 +8,10 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "@/context/language-context";
 
 export default function PatientPortalPage() {
+  const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState("");
 
   return (
@@ -23,7 +25,7 @@ export default function PatientPortalPage() {
             Your AI Healthcare Companion
           </div>
           <h1 className="text-5xl lg:text-7xl font-black tracking-tight leading-tight">
-            How can we help you <span className="text-teal-400">today?</span>
+            {t("howCanWeHelp")}
           </h1>
           <div className="relative max-w-lg group">
             <Search className="absolute left-6 top-1/2 -translate-y-1/2 w-6 h-6 text-slate-400 group-focus-within:text-teal-400 transition-colors" />
@@ -57,7 +59,7 @@ export default function PatientPortalPage() {
             <div className="relative z-10 space-y-6">
               <div className="flex items-center gap-2 text-teal-600 font-black text-xs uppercase tracking-widest">
                 <Clock className="w-4 h-4" />
-                Next Appointment
+                {t("nextAppointment")}
               </div>
               <div className="flex items-center gap-6">
                 <div className="w-16 h-16 rounded-2xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-900 dark:text-white font-black text-xl">
@@ -156,12 +158,12 @@ export default function PatientPortalPage() {
               <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center">
                 <Sparkles className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-2xl font-black leading-tight">Need immediate advice?</h3>
+              <h3 className="text-2xl font-black leading-tight">{t("aiTriage")}</h3>
               <p className="text-sm opacity-80 leading-relaxed">
                 Chat with our AI symptoms checker. Get instant guidance and book the right specialist in seconds.
               </p>
               <button className="w-full py-4 bg-white text-teal-600 rounded-2xl font-black text-sm shadow-lg hover:scale-[1.02] active:scale-95 transition-all">
-                Start AI Triage
+                {t("startTriage")}
               </button>
             </div>
           </div>

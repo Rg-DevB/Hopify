@@ -1,60 +1,44 @@
-# Hopify — Next-Gen Clinic Management SaaS
+# 🏥 Hopify - AI-Powered Clinic Management SaaS
 
-Hopify is a modern, AI-powered clinic management platform designed to streamline medical operations, enhance patient engagement, and automate administrative tasks with a premium user experience.
+Hopify is a high-fidelity, professional-grade medical SaaS platform designed to streamline clinic operations using artificial intelligence. From patient triage to automated prescriptions and advanced financial analytics, Hopify provides a complete ecosystem for modern healthcare providers.
 
-## ✨ Key Features
+![Dashboard Preview](https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=2070)
 
-- **📊 Intelligent Dashboard**: Real-time analytics, revenue tracking, and AI performance metrics.
-- **📅 Smart Calendar**: Drag-and-drop appointment scheduling with multi-view support.
-- **🤖 AI Booking Assistant**: Automated patient scheduling and triage powered by state-of-the-art LLMs.
-- **👥 Patient Directory**: Comprehensive health records and visit history management.
-- **💳 Unified Billing**: Professional invoice generation and payment tracking.
-- **🌓 Dark/Light Mode**: Fully responsive, high-performance UI with native dark mode support.
+## ✨ Core Features
+
+### 🏢 Clinic Management
+- **📊 Advanced Analytics**: Real-time insights into clinic performance, revenue growth, and operational efficiency.
+- **👨‍⚕️ Specialist Directory**: Complete management of medical staff, availability, and specialty tracking.
+- **🛌 Facility Control**: Real-time monitoring of hospital bed occupancy, wards, and maintenance status.
+- **📦 Pharmacy & Inventory**: Comprehensive medicine tracking with low-stock alerts and expiry monitoring.
+
+### 🤖 AI-Powered Intelligence
+- **🩺 AI Prescription Assistant**: Symptom analysis, diagnostic suggestions, and automated prescription generation with allergy cross-referencing.
+- **⚡ AI Live Feed**: Real-time monitoring of patient interactions and clinical insights.
+- **🛡️ Safety Guardrails**: Built-in allergy and drug interaction checking for medical safety.
+
+### 💳 Financial Suite
+- **🧾 Professional Billing**: Complete invoice generation with detailed service breakdowns and status tracking.
+- **💸 Revenue Tracking**: Visual financial overviews with growth trends and pending payment monitoring.
+
+### 📱 Patient Experience
+- **🌐 Unified Patient Portal**: A dedicated public-facing space for patients to find doctors, book appointments, and view medical records.
+- **💬 AI Triage Chat**: Instant medical guidance for patients via an intelligent symptoms checker.
 
 ## 🚀 Tech Stack
 
 - **Frontend**: Next.js 15 (App Router), React 19, Tailwind CSS
-- **Components**: Radix UI, Lucide React, Sonner (Toasts)
-- **State & UI**: Next-Themes, Framer Motion
-- **Database**: Supabase (PostgreSQL)
-- **AI**: Anthropic / OpenAI Integration
+- **Components**: Radix UI, Lucide React, Framer Motion
+- **State & Notifications**: Sonner (Toasts), Next-Themes (Dark/Light Mode)
+- **Database & Auth**: Supabase (PostgreSQL)
+- **AI Integration**: Anthropic / OpenAI Ready
 
 ## 🛠️ Getting Started
 
-### Prerequisites
-
-- Node.js 18+ 
-- npm / pnpm / yarn
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/hopify.git
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Configure environment variables:
-   Create a `.env.local` file with your credentials:
-   ```env
-   NEXT_PUBLIC_SUPABASE_URL=your_url
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_key
-   ANTHROPIC_API_KEY=your_key
-   ```
-
-4. Run the development server:
-   ```bash
-   npm run dev
-   ```
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+1. **Clone the repository**
+2. **Install dependencies**: `npm install`
+3. **Configure Environment**: Set up your `.env.local` with Supabase and AI API keys.
+4. **Run development**: `npm run dev`
 
 ---
-
-Built with ❤️ by **Hopify Team**
+*Built with ❤️ for the future of healthcare.*

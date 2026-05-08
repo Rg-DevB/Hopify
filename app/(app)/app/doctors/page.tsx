@@ -2,7 +2,7 @@
 
 import { 
   Stethoscope, Search, Plus, MoreVertical, Star, 
-  Mail, Phone, Calendar, CheckCircle2, Clock, ListIcon
+  Mail, Phone, Calendar, CheckCircle2, Clock
 } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";

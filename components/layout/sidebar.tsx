@@ -6,32 +6,36 @@ import { useState } from "react";
 import { 
   LayoutDashboard, Calendar, Users, Briefcase, Sparkles, Settings, 
   CreditCard, User, LogOut, Activity, HeartPulse, PanelLeftClose, PanelLeft, Menu,
-  Stethoscope, Bed, Pill
+  Stethoscope, Bed, Pill, TrendingUp
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { logout } from "@/app/actions/auth";
+import { useTranslation } from "@/context/language-context";
+import { TranslationKeys } from "@/lib/translations";
 
-const mainNavItems = [
-  { title: "Dashboard", href: "/app/dashboard", icon: LayoutDashboard },
-  { title: "Analytics", href: "/app/analytics", icon: TrendingUp },
-  { title: "Calendar", href: "/app/calendar", icon: Calendar },
-  { title: "Appointments", href: "/app/appointments", icon: Activity },
-  { title: "Patients", href: "/app/patients", icon: Users },
-  { title: "Doctors", href: "/app/doctors", icon: Stethoscope },
-  { title: "Rooms", href: "/app/rooms", icon: Bed },
-  { title: "AI Prescription", href: "/app/ai-prescription", icon: Sparkles },
-  { title: "Pharmacy", href: "/app/pharmacy", icon: Pill },
-  { title: "Services", href: "/app/services", icon: Briefcase },
+const mainNavItems: { title: TranslationKeys; href: string; icon: any }[] = [
+  { title: "dashboard", href: "/app/dashboard", icon: LayoutDashboard },
+  { title: "analytics", href: "/app/analytics", icon: TrendingUp },
+  { title: "calendar", href: "/app/calendar", icon: Calendar },
+  { title: "appointments", href: "/app/appointments", icon: Activity },
+  { title: "patients", href: "/app/patients", icon: Users },
+  { title: "doctors", href: "/app/doctors", icon: Stethoscope },
+  { title: "rooms", href: "/app/rooms", icon: Bed },
+  { title: "aiPrescription", href: "/app/ai-prescription", icon: Sparkles },
+  { title: "pharmacy", href: "/app/pharmacy", icon: Pill },
+  { title: "services", href: "/app/services", icon: Briefcase },
+  { title: "publicPortal", href: "/portal", icon: HeartPulse },
 ];
 
-const configNavItems = [
-  { title: "AI Settings", href: "/app/ai-settings", icon: Sparkles },
-  { title: "Settings", href: "/app/settings", icon: Settings },
-  { title: "Billing", href: "/app/billing", icon: CreditCard },
-  { title: "My Profile", href: "/app/profile", icon: User },
+const configNavItems: { title: TranslationKeys; href: string; icon: any }[] = [
+  { title: "aiSettings", href: "/app/ai-settings", icon: Sparkles },
+  { title: "settings", href: "/app/settings", icon: Settings },
+  { title: "billing", href: "/app/billing", icon: CreditCard },
+  { title: "myProfile", href: "/app/profile", icon: User },
 ];
 
 export default function Sidebar() {
+  const { t } = useTranslation();
   const pathname = usePathname();
   const [collapsed, setCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -62,10 +66,10 @@ export default function Sidebar() {
                     : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-slate-900 dark:hover:text-slate-200"
                 )}>
                   <item.icon className={cn("w-5 h-5 shrink-0", isActive ? "text-teal-600 dark:text-teal-400" : "text-slate-400")} />
-                  {!collapsed && item.title}
+                  {!collapsed && t(item.title)}
                   {collapsed && (
                     <div className="absolute left-full ml-2 px-2.5 py-1.5 bg-slate-900 dark:bg-slate-700 text-white text-xs font-medium rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50 shadow-lg">
-                      {item.title}
+                      {t(item.title)}
                     </div>
                   )}
                 </div>
@@ -89,10 +93,10 @@ export default function Sidebar() {
                       : "text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-slate-900 dark:hover:text-slate-200"
                   )}>
                     <item.icon className={cn("w-5 h-5 shrink-0", isActive ? "text-teal-600 dark:text-teal-400" : "text-slate-400")} />
-                    {!collapsed && item.title}
+                    {!collapsed && t(item.title)}
                     {collapsed && (
                       <div className="absolute left-full ml-2 px-2.5 py-1.5 bg-slate-900 dark:bg-slate-700 text-white text-xs font-medium rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50 shadow-lg">
-                        {item.title}
+                        {t(item.title)}
                       </div>
                     )}
                   </div>
@@ -112,7 +116,7 @@ export default function Sidebar() {
           )}
         >
           <LogOut className="w-5 h-5 text-slate-400 shrink-0" />
-          {!collapsed && "Sign Out"}
+          {!collapsed && t("logout")}
         </button>
         {/* Collapse toggle — desktop only */}
         <button 

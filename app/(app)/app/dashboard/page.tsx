@@ -12,6 +12,7 @@ import AddPatientModal from "@/components/modals/add-patient-modal"
 import { toast } from "sonner"
 import { useEffect, useState } from "react"
 import { cn } from "@/lib/utils"
+import { useTranslation } from "@/context/language-context"
 
 // Mini bar chart data (last 7 days revenue)
 const revenueData = [
@@ -47,6 +48,7 @@ const colorMap: Record<string, string> = {
 }
 
 export default function DashboardPage() {
+  const { t } = useTranslation()
   const completionRate = 73
   const satisfactionScore = 4.8
   const [mounted, setMounted] = useState(false)
@@ -75,7 +77,7 @@ export default function DashboardPage() {
             </div>
             <span className="text-slate-400 dark:text-slate-500 text-xs font-medium">Sunday, May 7, 2026</span>
           </div>
-          <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">Good morning, Dr. Tajuddin</h1>
+          <h1 className="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">{t("welcome")}, Dr. Tajuddin</h1>
           <p className="text-slate-500 dark:text-slate-400 mt-1">Here is what&apos;s happening with your clinic today.</p>
         </div>
         
@@ -107,7 +109,7 @@ export default function DashboardPage() {
                <CalendarPlus className="w-6 h-6 text-teal-600 dark:text-teal-400" />
             </div>
             <div className="text-left">
-              <h3 className="font-bold text-slate-800 dark:text-slate-200 text-sm">+ Appointment</h3>
+              <h3 className="font-bold text-slate-800 dark:text-slate-200 text-sm">{t("addAppointment")}</h3>
               <p className="text-xs text-slate-400">Schedule a visit</p>
             </div>
           </div>
@@ -119,7 +121,7 @@ export default function DashboardPage() {
                <UserPlus className="w-6 h-6 text-indigo-600 dark:text-indigo-400" />
             </div>
             <div className="text-left">
-              <h3 className="font-bold text-slate-800 dark:text-slate-200 text-sm">+ Patient</h3>
+              <h3 className="font-bold text-slate-800 dark:text-slate-200 text-sm">{t("addPatient")}</h3>
               <p className="text-xs text-slate-400">Register new record</p>
             </div>
           </div>
@@ -130,7 +132,7 @@ export default function DashboardPage() {
              <FileText className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
           </div>
           <div>
-            <h3 className="font-bold text-slate-800 dark:text-slate-200 text-sm">Export CSV</h3>
+            <h3 className="font-bold text-slate-800 dark:text-slate-200 text-sm">{t("exportCsv")}</h3>
             <p className="text-xs text-slate-400">Download reports</p>
           </div>
         </div>
@@ -141,7 +143,7 @@ export default function DashboardPage() {
                <Bot className="w-6 h-6 text-violet-600 dark:text-violet-400" />
             </div>
             <div className="text-left">
-              <h3 className="font-bold text-slate-800 dark:text-slate-200 text-sm">AI Settings</h3>
+              <h3 className="font-bold text-slate-800 dark:text-slate-200 text-sm">{t("aiSettings")}</h3>
               <p className="text-xs text-slate-400">Configure agents</p>
             </div>
           </div>
@@ -153,7 +155,7 @@ export default function DashboardPage() {
         <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:border-teal-500/50 transition-all">
           <div className="flex justify-between items-start">
             <div>
-              <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Patients Today</p>
+              <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{t("activePatients")}</p>
               <h3 className="text-2xl font-black text-slate-900 dark:text-white mt-2">48</h3>
               <p className="text-[11px] text-teal-600 font-bold mt-1">+12% from yesterday</p>
             </div>
@@ -166,7 +168,7 @@ export default function DashboardPage() {
         <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:border-indigo-500/50 transition-all">
           <div className="flex justify-between items-start">
             <div>
-              <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Doctors</p>
+              <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{t("availableDoctors")}</p>
               <h3 className="text-2xl font-black text-slate-900 dark:text-white mt-2">14<span className="text-sm text-slate-400 font-medium ml-1">/ 18</span></h3>
               <p className="text-[11px] text-indigo-600 font-bold mt-1">4 Available now</p>
             </div>
@@ -179,7 +181,7 @@ export default function DashboardPage() {
         <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm hover:border-emerald-500/50 transition-all">
           <div className="flex justify-between items-start">
             <div>
-              <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Hospital Beds</p>
+              <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{t("bedOccupancy")}</p>
               <h3 className="text-2xl font-black text-slate-900 dark:text-white mt-2">84<span className="text-sm text-slate-400 font-medium ml-1">/ 120</span></h3>
               <p className="text-[11px] text-emerald-600 font-bold mt-1">36 Rooms available</p>
             </div>
@@ -192,7 +194,7 @@ export default function DashboardPage() {
         <div className="bg-white dark:bg-slate-900 p-5 rounded-2xl border border-rose-100 dark:border-rose-900/50 shadow-sm hover:border-rose-500/50 transition-all">
           <div className="flex justify-between items-start">
             <div>
-              <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">Emergency</p>
+              <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">{t("emergencyCases")}</p>
               <h3 className="text-2xl font-black text-slate-900 dark:text-white mt-2">03</h3>
               <p className="text-[11px] text-rose-600 font-bold mt-1 flex items-center gap-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-rose-500 animate-ping" />

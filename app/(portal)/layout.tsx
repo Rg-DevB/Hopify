@@ -4,6 +4,7 @@ import { HeartPulse, User, Bell, LogOut, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import LanguageSwitcher from "@/components/language-switcher";
 
 export default function PatientPortalLayout({
   children,
@@ -39,6 +40,7 @@ export default function PatientPortalLayout({
               <div className="h-6 w-px bg-slate-200 dark:bg-slate-800" />
               
               <div className="flex items-center gap-4">
+                <LanguageSwitcher />
                 <button className="relative p-2 text-slate-400 hover:text-teal-600 transition-colors">
                   <Bell className="w-5 h-5" />
                   <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-rose-500 rounded-full border-2 border-white dark:border-slate-900" />

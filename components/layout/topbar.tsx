@@ -3,6 +3,7 @@
 import { Search, Bell, Moon, Sun, X, CalendarPlus, UserPlus, AlertCircle, CreditCard } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import LanguageSwitcher from "@/components/language-switcher";
 
 const sampleNotifications = [
   { id: 1, title: "New appointment booked", desc: "Md Tajuddin — Tomorrow at 9:30 AM", time: "2m ago", icon: CalendarPlus, read: false, color: "text-teal-600 dark:text-teal-400 bg-teal-50 dark:bg-teal-500/10" },
@@ -32,6 +33,7 @@ export default function Topbar() {
         </div>
       </div>
       <div className="flex items-center gap-2 sm:gap-3 ml-4">
+        <LanguageSwitcher />
         {mounted && (
           <button onClick={() => setTheme(theme === "dark" ? "light" : "dark")} className="relative p-2 text-slate-400 hover:text-teal-600 transition-colors rounded-full hover:bg-slate-50 dark:hover:bg-slate-800">
             {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
