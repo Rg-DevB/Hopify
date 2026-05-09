@@ -43,14 +43,14 @@ export default function Sidebar() {
   const NavContent = () => (
     <>
       {/* Logo */}
-      <div className={cn("p-4 flex items-center gap-2.5", collapsed ? "justify-center px-2" : "px-6")}>
+      <Link href="/" className={cn("p-4 flex items-center gap-2.5 hover:opacity-80 transition-opacity", collapsed ? "justify-center px-2" : "px-6")}>
         <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-500 flex items-center justify-center shadow-lg shadow-teal-500/20 shrink-0">
           <HeartPulse className="w-5 h-5 text-white" />
         </div>
         {!collapsed && (
           <span className="text-xl font-extrabold text-slate-800 dark:text-slate-100 tracking-tight">Hopify</span>
         )}
-      </div>
+      </Link>
 
       <div className="flex-1 overflow-y-auto px-3 py-2 flex flex-col gap-6">
         <nav className="flex flex-col gap-1">

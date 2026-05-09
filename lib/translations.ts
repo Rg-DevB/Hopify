@@ -38,6 +38,22 @@ export const translations = {
     nextAppointment: "Next Appointment",
     aiTriage: "Need immediate advice?",
     startTriage: "Start AI Triage",
+
+    // Landing Page
+    heroTitle: "Automate Care with AI.",
+    heroSub: "Hopify transforms your clinic into an intelligent ecosystem. AI triage, automated prescriptions, and real-time clinical analytics.",
+    heroCTA: "Start Free Trial",
+    heroDemo: "Patient Portal",
+    featuresTitle: "Every module you need.",
+    featuresSub: "Full SaaS Ecosystem currently active",
+    trustedBy: "Trusted by Clinical Leaders Worldwide",
+    securityTitle: "Military-grade Security.",
+    roiTitle: "Maximize Clinical Efficiency",
+    roiSub: "Our customers see significant improvements in operational speed and patient satisfaction.",
+    timeSaved: "Time Saved on Admin",
+    revenueGrowth: "Revenue Growth",
+    accuracyRate: "AI Diagnosis Accuracy",
+    satisfactionRate: "Patient Satisfaction",
   },
   fr: {
     // Sidebar
@@ -78,6 +94,22 @@ export const translations = {
     nextAppointment: "Prochain Rendez-vous",
     aiTriage: "Besoin d'un conseil immédiat ?",
     startTriage: "Démarrer le Triage IA",
+
+    // Landing Page
+    heroTitle: "Automatisez les Soins avec l'IA.",
+    heroSub: "Hopify transforme votre clinique en un écosystème intelligent. Triage IA, prescriptions automatisées et analyses cliniques en temps réel.",
+    heroCTA: "Essai Gratuit",
+    heroDemo: "Portail Patient",
+    featuresTitle: "Tous les modules nécessaires.",
+    featuresSub: "Écosystème SaaS complet actuellement actif",
+    trustedBy: "Approuvé par les Leaders Cliniques mondiaux",
+    securityTitle: "Sécurité de Niveau Militaire.",
+    roiTitle: "Maximisez l'Efficacité Clinique",
+    roiSub: "Nos clients constatent des améliorations significatives de la vitesse opérationnelle et de la satisfaction des patients.",
+    timeSaved: "Temps Administratif Gagné",
+    revenueGrowth: "Croissance des Revenus",
+    accuracyRate: "Précision du Diagnostic IA",
+    satisfactionRate: "Satisfaction des Patients",
   }
 };
 
